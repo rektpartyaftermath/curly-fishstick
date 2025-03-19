@@ -84,12 +84,12 @@
 //      "server": "m.facebook.com",
 //      "server": "www.sushiroll.co.id",
       "server_port": 80,
-      "password": "54b4fea6-e2f5-4a4d-b628-29c852826a14",
+      "password": "bd57a7d5-a611-4bd2-b17c-800a81098ff3",
       "transport": {
         "type": "ws",
-        "path": "/free/138.2.78.38:1443",
+        "path": "/free/139.180.215.77:57878",
         "headers": {
-          "Host": "nuclear.us.kg"
+          "Host": "nuclear.biz.id"
         }
       }
     },
