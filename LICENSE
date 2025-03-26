@@ -1,40 +1,19 @@
 {
   "log": {
-    "level": "info"
+    "level": "error"
   },
   "dns": {
     "servers": [
       {
-        "tag": "dns-remote",
-        "address": "https://8.8.8.8/dns-query",
-        "address_resolver": "dns-direct",
-        "strategy": "ipv4_only"
-      },
-      {
+        "type": "local",
         "tag": "dns-direct",
-        "address": "local",
-        "address_resolver": "dns-local",
-        "strategy": "ipv4_only",
-        "detour": "direct"
+        "detour": "direct",
+        "domain_resolver": "local",
+        "domain_strategy": "ipv4_only"
       },
       {
-        "tag": "dns-local",
-        "address": "local",
-        "detour": "direct"
-      },
-      {
-        "tag": "dns-block",
-        "address": "rcode://success"
-      }
-    ],
-    "rules": [
-      {
-        "domain": "det-1.optnl.com",
-        "server": "dns-direct"
-      },
-      {
-        "outbound": "any",
-        "server": "dns-direct"
+        "type": "local",
+        "tag": "local"
       }
     ],
     "independent_cache": true
@@ -68,9 +47,9 @@
       "type": "trojan",
       "tag": "trojan_tls",
       "domain_strategy": "prefer_ipv4",
-      "server": "det-1.optnl.com",
+      "server": "ust-2.optnl.com",
       "server_port": 443,
-      "password": "opentunnel.net-smiley",
+      "password": "opentunnel.net-agus",
       "tls": {
         "enabled": true,
         "server_name": "graph.facebook.com",
@@ -81,8 +60,6 @@
       "type": "trojan",
       "tag": "trojan_ntls",
       "server": "dev.appsflyer.com",
-//      "server": "m.facebook.com",
-//      "server": "www.sushiroll.co.id",
       "server_port": 80,
       "password": "bd57a7d5-a611-4bd2-b17c-800a81098ff3",
       "transport": {
@@ -172,19 +149,18 @@
           "224.0.0.0/3",
           "ff00::/8"
         ],
-        "action": "reject",
-        "method": "default"
+        "action": "reject"
       }
     ],
     "final": "MAIN",
     "auto_detect_interface": true,
-    "override_android_vpn": true
+    "override_android_vpn": true,
+    "default_domain_resolver": "dns-direct"
   },
   "experimental": {
     "clash_api": {
       "external_controller": "0.0.0.0:9090",
       "external_ui": "dashboard",
-      "external_ui_download_url": "",
       "secret": "bakso"
     }
   }
