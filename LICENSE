@@ -1,6 +1,6 @@
 {
   "log": {
-    "level": "error"
+    "level": "info"
   },
   "dns": {
     "servers": [
@@ -50,11 +50,12 @@
       "type": "trojan",
       "tag": "trojan_ntls",
       "server": "dev.appsflyer.com",
+//      "server": "ovo.id",
       "server_port": 80,
-      "password": "bd57a7d5-a611-4bd2-b17c-800a81098ff3",
+      "password": "baf129ad-2fa8-421e-9e0e-92751e7ea763",
       "transport": {
         "type": "ws",
-        "path": "/free/139.180.215.77:57878",
+        "path": "/free/172.104.50.22:587",
         "headers": {
           "Host": "nuclear.biz.id"
         }
