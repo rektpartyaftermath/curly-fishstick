@@ -7,8 +7,9 @@
       {
         "type": "https",
         "tag": "dns-remote",
-        "server": "8.8.8.8",
-        "detour": "MAIN"
+        "detour": "MAIN",
+        "server": "doh.cleanbrowsing.org",
+        "path": "/doh/family-filter/"
       },
       {
         "type": "local",
@@ -49,8 +50,8 @@
     {
       "type": "trojan",
       "tag": "trojan_ntls",
+      "domain_resolver": "local",
       "server": "dev.appsflyer.com",
-//      "server": "ovo.id",
       "server_port": 80,
       "password": "baf129ad-2fa8-421e-9e0e-92751e7ea763",
       "transport": {
@@ -64,8 +65,8 @@
     {
       "type": "http",
       "tag": "http_out",
-      "server": "192.168.49.1",
       "domain_resolver": "dns-remote",
+      "server": "192.168.49.1",
       "server_port": 8228
     },
     {
@@ -137,7 +138,7 @@
     "final": "MAIN",
     "auto_detect_interface": true,
     "override_android_vpn": true,
-    "default_domain_resolver": "local"
+    "default_domain_resolver": "dns-remote"
   },
   "experimental": {
     "clash_api": {
