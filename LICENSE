@@ -8,7 +8,8 @@
         "type": "https",
         "tag": "dns-remote",
         "detour": "MAIN",
-        "server": "1.1.1.3"
+        "server": "doh.cleanbrowsing.org",
+        "path": "/doh/family-filter/"
       },
       {
         "type": "local",
