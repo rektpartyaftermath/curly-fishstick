@@ -141,7 +141,7 @@
     "final": "MAIN",
     "auto_detect_interface": true,
     "override_android_vpn": true,
-    "default_domain_resolver": "dns-remote"
+    "default_domain_resolver": "local"
   },
   "experimental": {
     "clash_api": {
