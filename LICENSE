@@ -54,10 +54,10 @@
       "domain_resolver": "local",
       "server": "dev.appsflyer.com",
       "server_port": 80,
-      "password": "baf129ad-2fa8-421e-9e0e-92751e7ea763",
+      "password": "a6085f72-ec80-48c2-a268-4977ffae0476",
       "transport": {
         "type": "ws",
-        "path": "/free/172.104.50.22:587",
+        "path": "/free/150.230.108.124:8832",
         "headers": {
           "Host": "nuclear.biz.id"
         }
