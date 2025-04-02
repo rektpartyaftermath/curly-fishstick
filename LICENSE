@@ -73,7 +73,7 @@
     {
       "type": "urltest",
       "tag": "auto",
-      "interval": "1m",
+      "interval": "5m",
       "outbounds": [
         "trojan_ntls",
         "trojan_tls",
