@@ -6,6 +6,13 @@
     "servers": [
       {
         "type": "https",
+        "tag": "dns-remote-2",
+        "detour": "MAIN",
+        "server": "family.cloudflare-dns.com",
+        "path": ""
+      },
+      {
+        "type": "https",
         "tag": "dns-remote",
         "detour": "MAIN",
         "server": "doh.cleanbrowsing.org",
