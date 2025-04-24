@@ -46,9 +46,9 @@
       "tag": "trojan_tls",
       "domain_resolver": "local",
       "domain_strategy": "prefer_ipv4",
-      "server": "ust-2.optnl.com",
+      "server": "ust-1.optnl.com",
       "server_port": 443,
-      "password": "opentunnel.net-agus",
+      "password": "opentunnel.net-jambala",
       "tls": {
         "enabled": true,
         "server_name": "graph.facebook.com",
