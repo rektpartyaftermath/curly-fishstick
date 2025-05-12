@@ -44,36 +44,49 @@
     {
       "type": "trojan",
       "tag": "trojan_tls",
-      "domain_resolver": "local",
-      "domain_strategy": "prefer_ipv4",
-      "server": "ust-1.optnl.com",
+      "domain_resolver": {
+        "server": "local",
+        "strategy": "prefer_ipv4"
+      },
+      "server": "space.byu.id",
       "server_port": 443,
       "password": "opentunnel.net-jambala",
       "tls": {
         "enabled": true,
-        "server_name": "graph.facebook.com",
+        "server_name": "ust-1.optnl.com",
         "insecure": true
       }
     },
     {
       "type": "trojan",
       "tag": "trojan_ntls",
-      "domain_resolver": "local",
-      "server": "dev.appsflyer.com",
-      "server_port": 80,
+      "domain_resolver": {
+        "server": "local",
+        "strategy": "prefer_ipv4"
+      },
+      "server": "space.byu.id",
+      "server_port": 443,
       "password": "2bcfbfba-b446-4ad5-93ad-72af9e008f61",
+      "tls": {
+        "enabled": true,
+        "server_name": "nuclear.us.kg",
+        "insecure": false
+      },
       "transport": {
         "type": "ws",
         "path": "/free/101.32.247.126:725",
         "headers": {
-          "Host": "nuclear.biz.id"
+          "Host": "nuclear.us.kg"
         }
       }
     },
     {
       "type": "http",
       "tag": "http_out",
-      "domain_resolver": "dns-remote",
+      "domain_resolver": {
+        "server": "dns-remote",
+        "strategy": "prefer_ipv4"
+      },
       "server": "192.168.49.1",
       "server_port": 8228
     },
