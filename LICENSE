@@ -8,15 +8,13 @@
         "type": "https",
         "tag": "dns-remote-2",
         "detour": "MAIN",
-        "server": "family.cloudflare-dns.com",
-        "path": ""
+        "server": "family.cloudflare-dns.com"
       },
       {
         "type": "https",
         "tag": "dns-remote",
         "detour": "MAIN",
-        "server": "doh.cleanbrowsing.org",
-        "path": "/doh/family-filter/"
+        "server": "dns.google"
       },
       {
         "type": "local",
@@ -59,7 +57,7 @@
     },
     {
       "type": "trojan",
-      "tag": "trojan_ntls",
+      "tag": "trojan_ntls-jelbobs",
       "domain_resolver": {
         "server": "local",
         "strategy": "prefer_ipv4"
@@ -69,14 +67,35 @@
       "password": "2bcfbfba-b446-4ad5-93ad-72af9e008f61",
       "tls": {
         "enabled": true,
-        "server_name": "nuclear.us.kg",
-        "insecure": false
+        "server_name": "nuclear.us.kg"
       },
       "transport": {
         "type": "ws",
         "path": "/free/101.32.247.126:725",
         "headers": {
           "Host": "nuclear.us.kg"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "trojan_ntls-workers",
+      "domain_resolver": {
+        "server": "local",
+        "strategy": "prefer_ipv4"
+      },
+      "server": "csn.cancer.org",
+      "server_port": 80,
+      "password": "b5fc8895-8ed1-486e-8c52-e60698a22f1e",
+      "tls": {
+        "server_name": "delicate-poetry-08cd.josh4nook.workers.dev",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/146.235.18.248-45137",
+        "headers": {
+          "Host": "delicate-poetry-08cd.josh4nook.workers.dev"
         }
       }
     },
@@ -93,19 +112,21 @@
     {
       "type": "urltest",
       "tag": "auto",
-      "interval": "5m",
       "outbounds": [
-        "trojan_ntls",
+        "trojan_ntls-workers",
+        "trojan_ntls-jelbobs",
         "trojan_tls",
         "http_out"
-      ]
+      ],
+      "interval": "5m0s"
     },
     {
       "type": "selector",
       "tag": "MAIN",
       "outbounds": [
         "auto",
-        "trojan_ntls",
+        "trojan_ntls-jelbobs",
+        "trojan_ntls-workers",
         "trojan_tls",
         "http_out",
         "direct"
